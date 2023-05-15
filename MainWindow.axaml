@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CarouselIssues.MainWindow"
+        Title="CarouselIssues"
+        Background="#313233"
+        >
+        
+        <Panel>
+                <Carousel x:Name="Carousel">
+                        <Carousel.PageTransition>
+                                <PageSlide Duration="0.25" Orientation="Horizontal" />
+                        </Carousel.PageTransition>
+            
+                        <Carousel.Items>
+                                <Label HorizontalAlignment="Center" Content="Hello1" />
+                                <Label HorizontalAlignment="Center" Content="Hello2" />
+                                <Label HorizontalAlignment="Center" Content="Hello3" />
+                                <Label HorizontalAlignment="Center" Content="Hello4" />
+                                <Label HorizontalAlignment="Center" Content="Hello5" />
+                        </Carousel.Items>
+                </Carousel>
+        
+                <Button x:Name="LeftButton" VerticalAlignment="Center" Content="Back" />
+                <Button x:Name="RightButton" VerticalAlignment="Center" HorizontalAlignment="Right" Content="Next" />
+        
+                <!-- Commenting out the combobox breaks the Carousel transition -->
+                <ComboBox MaxWidth="0" />
+        </Panel>
+        
+</Window>
